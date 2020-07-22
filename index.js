@@ -126,15 +126,15 @@ console.log(getWinnersByYear(getWinners, getYears));
 
 function getAverageGoals(data) {
 
-    data.reduce(function(accumulator, item) {
-        return accumulator
-    })
+    const sum = data.reduce(function(accumulator, item) {
+        return accumulator + item["Home Team Goals"] + item["Away Team Goals"];
+    },0)
 
-    return accumulator / data.length;
+    return sum / data.length;
 
 };
 
-getAverageGoals();
+console.log(getAverageGoals(fifaData));
 
 /// STRETCH 🥅 //
 
